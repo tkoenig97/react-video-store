@@ -1,3 +1,5 @@
+import InventoryItem from "./InventoryItem";
+
 export default function InventoryContainer() {
     return (
         <div className="inventory-container">
@@ -7,6 +9,7 @@ export default function InventoryContainer() {
                 <div>B</div>
                 <div>C</div>
                 <div>D</div>
+                <InventoryItem />
             </div>
         </div>
     );
