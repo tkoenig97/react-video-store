@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DetailsPanel from './DetailsPanel';
 import InventoryItem from './InventoryItem';
 
 export default function InventoryContainer({ inventory }) {
@@ -15,16 +16,23 @@ export default function InventoryContainer({ inventory }) {
     };
 
     return (
-        <div className="inventory-container">
-            <h2>Inventory</h2>
-            <div className="inventory-list">
-                {inventory.map((props) => (
-                    <InventoryItem 
-                        setSelectedTitleById = {setSelectedTitleById}
-                        {...props} />
-                ))}
+        <>
+            <div className="inventory-container">
+                <h2>Inventory</h2>
+                <div className="inventory-list">
+                    {inventory.map((props) => (
+                        <InventoryItem 
+                            setSelectedTitleById = {setSelectedTitleById}
+                            {...props} />
+                    ))}
+                </div>
             </div>
-            {selectedTitle && <div>Hello World</div>}
-        </div>
+            <div className="details-panel">
+                {selectedTitle && (
+                    <DetailsPanel 
+                        selectedTitle={selectedTitle}/>
+                )}
+            </div>
+        </>
     );
 }
