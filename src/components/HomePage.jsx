@@ -30,7 +30,8 @@ export default function InventoryContainer({ inventory }) {
             {/* will only render if there is a selectedFilm (not null) */}
             {selectedTitle && (
                 <DetailsPanel 
-                    selectedTitle={selectedTitle}/>
+                    selectedTitle={selectedTitle}
+                    setSelectedTitleById={setSelectedTitleById}/>
             )}
         </>
     );
