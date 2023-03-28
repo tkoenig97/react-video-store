@@ -1,4 +1,4 @@
-export default function InventoryItem({ title, imgUrl, copiesAvailable }) {
+export default function InventoryItem({ id, title, imgUrl, copiesAvailable, setSelectedTitleById }) {
     return (
         <div className="inventoryItem">
             <h2>{title}</h2>
