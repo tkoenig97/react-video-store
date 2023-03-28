@@ -15,6 +15,7 @@ main {
 
 footer {
   text-align: center;
+  color: white;
   background-color: red;
 }
 
@@ -64,9 +65,29 @@ footer {
   flex-direction: column;
   border: 3px solid black;
   margin-top: 2.5%;
+  padding: 2.5%;
 }
 
 .details_panel h2 {
   margin: 0 auto;
   text-align: center;
+}
+
+.basic_container_column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+  text-align: center;
+}
+
+.basic_container_row {
+  display: flex;
+  margin-top: 2%;
+  flex-direction: row;
+  column-gap: 5%;
+  justify-content: center;
+}
+
+.align_center {
+  align-items: center;
 }
