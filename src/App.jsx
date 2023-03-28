@@ -1,4 +1,4 @@
-import InventoryContainer from './components/InventoryContainer';
+import InventoryContainer from './components/HomePage';
 import inventory from './data/inventory.json'
 import './App.css';
 
