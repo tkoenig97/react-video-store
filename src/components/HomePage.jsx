@@ -27,12 +27,11 @@ export default function InventoryContainer({ inventory }) {
                     ))}
                 </div>
             </div>
-            <div className="details-panel">
-                {selectedTitle && (
-                    <DetailsPanel 
-                        selectedTitle={selectedTitle}/>
-                )}
-            </div>
+            {/* will only render if there is a selectedFilm (not null) */}
+            {selectedTitle && (
+                <DetailsPanel 
+                    selectedTitle={selectedTitle}/>
+            )}
         </>
     );
 }

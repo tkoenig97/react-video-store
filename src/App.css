@@ -58,3 +58,10 @@ footer {
   flex-direction: column;
   margin: 10px 0;
 }
+
+.details_panel {
+  text-align: center;
+  display: flex;
+  border: 3px solid black;
+  margin-top: 2.5%;
+}
