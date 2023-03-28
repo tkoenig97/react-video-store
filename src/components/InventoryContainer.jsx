@@ -20,7 +20,6 @@ export default function InventoryContainer({ inventory }) {
             <div className="inventory-list">
                 {inventory.map((props) => (
                     <InventoryItem 
-                        key={props.id} 
                         setSelectedTitleById = {setSelectedTitleById}
                         {...props} />
                 ))}
