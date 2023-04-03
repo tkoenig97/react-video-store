@@ -17,9 +17,9 @@ export default function HomePage() {
     console.log(allFilmData);
 
     return (
-        <div className="page_container">
+        <div className="inventory-container">
             <h2>Inventory</h2>
-            <div className="section_container">
+            <div className="inventory-list">
                 {
                     allFilmData.map((filmData, index) => (
                         <InventoryItem
