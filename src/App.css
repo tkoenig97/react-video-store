@@ -10,31 +10,40 @@ header {
 }
 
 main {
-  min-height: 1120px;
+  min-height: 800px;
 }
 
 footer {
   text-align: center;
+  color: white;
   background-color: red;
 }
 
-.page_container {
-  padding: 64px;
-}
-
-.section_container {
+.title_container {
   border: 3px solid black;
   height: fit-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 5%;
-  padding: 36px;
-  margin: 36px 0;
+}
+
+.inventory-container {
+  text-align: center;
+  border: 3px solid black;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+.inventory-list {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .inventory_item {
-  width: 260px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,16 +54,38 @@ footer {
   height: 50px;
 }
 
+.item_actions {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.details_panel {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  margin-top: 2.5%;
+  padding: 2.5%;
+}
+
+.details_panel h2 {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .basic_container_column {
   display: flex;
   flex-direction: column;
   row-gap: 5%;
+  text-align: center;
 }
 
 .basic_container_row {
   display: flex;
+  margin-top: 2%;
   flex-direction: row;
   column-gap: 5%;
+  justify-content: center;
 }
 
 .align_center {

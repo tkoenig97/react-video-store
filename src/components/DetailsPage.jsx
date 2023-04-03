@@ -13,8 +13,7 @@ export default function DetailsPanel() {
     const { Title, Poster, Rated, Plot } = filmData;
 
     return (
-        <div className="section_container">
-            <Link to="/">Back to home page</Link>
+        <div className="details_panel">
             <h2>Details</h2>
             <div className="basic_container_column">
                 <h3>{Title}</h3>
@@ -23,6 +22,7 @@ export default function DetailsPanel() {
                     <p>{Plot}</p>
                     <pre style={{ fontSize: "40px" }}>{Rated}</pre>
                 </div>
+                <Link to="/">Back to home page</Link>
             </div>
         </div>
     );
