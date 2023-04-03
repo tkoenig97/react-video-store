@@ -1,5 +1,6 @@
 import InventoryContainer from './components/HomePage';
-import inventory from './data/inventory.json'
+import inventory from './data/inventory.json';
+import { Outlet } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
                 <h1>Video Store</h1>
             </header>
             <main>
-                <InventoryContainer inventory={inventory} />
+                <Outlet />
             </main>
             <footer>© 2023 Video Store</footer>
         </div>

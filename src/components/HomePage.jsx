@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import DetailsPanel from './DetailsPanel';
+import DetailsPanel from './DetailsPage';
 import InventoryItem from './InventoryItem';
 
 export default function InventoryContainer({ inventory }) {
