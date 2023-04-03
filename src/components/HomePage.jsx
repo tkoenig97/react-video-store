@@ -1,38 +1,34 @@
-import { useState } from 'react';
-import DetailsPanel from './DetailsPage';
+import { useLoaderData } from 'react-router-dom';
+import axios from 'axios';
 import InventoryItem from './InventoryItem';
+import inventory from '../data/inventory.json';
+import apiKey from '../data/apiKey.json';
 
-export default function InventoryContainer({ inventory }) {
-    const [selectedTitle, setSelectedTitle] = useState(null);
+export async function allFilmsLoader() {
+    const promises = inventory.map(imdbId => axios.get(`https://www.omdbapi.com/?i=${imdbId}&apikey=${apiKey}`));
+    const responses = await Promise.all(promises);
+    const allFilmData = responses.map(response => response.data);
+    return allFilmData;
+}
 
-    const setSelectedTitleById = (id) => {
-        const match = inventory.find((item) => item.id === id);
+export default function HomePage() {
 
-        if (match) {
-            setSelectedTitle(match);
-        } else {
-            setSelectedTitle(null);
-        }
-    };
+    const allFilmData = useLoaderData();
+    console.log(allFilmData);
 
     return (
-        <>
-            <div className="inventory-container">
-                <h2>Inventory</h2>
-                <div className="inventory-list">
-                    {inventory.map((props) => (
-                        <InventoryItem 
-                            setSelectedTitleById = {setSelectedTitleById}
-                            {...props} />
-                    ))}
-                </div>
+        <div className="page_container">
+            <h2>Inventory</h2>
+            <div className="section_container">
+                {
+                    allFilmData.map((filmData, index) => (
+                        <InventoryItem
+                            key={index}
+                            filmData={filmData}
+                        />
+                    ))
+                }
             </div>
-            {/* will only render if there is a selectedFilm (not null) */}
-            {selectedTitle && (
-                <DetailsPanel 
-                    selectedTitle={selectedTitle}
-                    setSelectedTitleById={setSelectedTitleById}/>
-            )}
-        </>
+        </div>
     );
 }

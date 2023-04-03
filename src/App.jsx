@@ -1,5 +1,3 @@
-import InventoryContainer from './components/HomePage';
-import inventory from './data/inventory.json';
 import { Outlet } from 'react-router-dom';
 import './App.css';
 

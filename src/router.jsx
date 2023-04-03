@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import App from './App';
 import HomePage, { allFilmsLoader } from './components/HomePage';
 import DetailsPage, { filmLoader } from './components/DetailsPage';
 import ErrorPage from './components/ErrorPage';
@@ -24,3 +25,4 @@ const router = createBrowserRouter([
 ]);
 
 export default router;
+

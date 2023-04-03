@@ -1,21 +1,12 @@
-export default function InventoryItem({
-    id,
-    title,
-    imgUrl,
-    copiesAvailable,
-    setSelectedTitleById,
-}) {
+import { useNavigate } from "react-router-dom";
+
+export default function InventoryItem(props) {
+    const navigate = useNavigate();
+
     return (
-        <div className="inventoryItem">
-            <h2>{title}</h2>
-            <img
-                src={imgUrl}
-                onClick={(event) => {
-                    event.stopPropagation();
-                    setSelectedTitleById(id);
-                }}
-            />
-            <p>Copies Available: {copiesAvailable.current}</p>
+        <div className="inventory_item" onClick={() => navigate(`/film/${props.filmData.imdbID}`)}>
+            <h3 className="item_title">{props.filmData.Title}</h3>
+            <img src={props.filmData.Poster} />
         </div>
     );
 }
