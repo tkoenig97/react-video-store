@@ -7,7 +7,7 @@ export async function filmLoader({ params }) {
     return response.data;
 }
 
-export default function DetailsPanel() {
+export default function DetailsPage() {
     const filmData = useLoaderData();
 
     const { Title, Poster, Rated, Plot } = filmData;
