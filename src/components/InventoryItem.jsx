@@ -10,7 +10,7 @@ export default function InventoryItem(props) {
     const navigate = useNavigate();
 
     return (
-        <Card>
+        <Card className='inventory_item'>
             <CardMedia
                 component="img"
                 sx={{ height: 300 }}

@@ -1,12 +1,13 @@
 #app_root {
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  color: #E6F8B2;
+  background-color: #79745C;
 }
 
 header {
   text-align: center;
-  border: 3px dotted black;
+  border: 3px dotted #CDE77F;
 }
 
 main {
@@ -16,11 +17,11 @@ main {
 footer {
   text-align: center;
   color: white;
-  background-color: red;
+  background-color: #704E2E;
 }
 
 .title_container {
-  border: 3px solid black;
+  border: 3px solid #CDE77F;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -30,7 +31,7 @@ footer {
 
 .inventory-container {
   text-align: center;
-  border: 3px solid black;
+  border: 3px solid #CDE77F;
   margin-top: 5%;
   margin-bottom: 5%;
   padding-bottom: 5%;
@@ -49,7 +50,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .item_title {
@@ -65,7 +65,7 @@ footer {
 .details_panel {
   display: flex;
   flex-direction: column;
-  border: 3px solid black;
+  border: 3px solid #CDE77F;
   margin-top: 5%;
   padding: 2.5%;
   margin-bottom: 5%;
