@@ -22,7 +22,9 @@ export default function DetailsPage() {
                     <p>{Plot}</p>
                     <pre style={{ fontSize: "40px" }}>{Rated}</pre>
                 </div>
-                <Link to="/">Back to home page</Link>
+                <Link to="/">
+                    <button>Back to home page</button>
+                </Link>
             </div>
         </div>
     );
