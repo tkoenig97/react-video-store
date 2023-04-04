@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Link, useLoaderData } from 'react-router-dom';
 import apiKey from '../data/apiKey.json';
+import { Button } from '@mui/material';
 
 export async function filmLoader({ params }) {
     const response = await axios.get(`https://www.omdbapi.com/?i=${params.filmId}&apikey=${apiKey}`);
@@ -23,7 +24,7 @@ export default function DetailsPage() {
                     <pre style={{ fontSize: "40px" }}>{Rated}</pre>
                 </div>
                 <Link to="/">
-                    <button>Back to home page</button>
+                    <Button variant="contained">Back to home page</Button>
                 </Link>
             </div>
         </div>
